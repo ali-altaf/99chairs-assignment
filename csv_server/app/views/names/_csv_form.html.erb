@@ -1,0 +1,7 @@
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+<% end %>
+<%= form_tag({:action => :create}, multipart: true) do %>
+    <%= text_area_tag :csv %>
+    <%= submit_tag( "Import" ) %>
+<% end %>
